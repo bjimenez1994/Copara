@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CarouselPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="Copara.Views.MainCarouselPage">
+
+    <ContentPage>
+        <ContentPage.Content>
+            <StackLayout BackgroundColor="#171717">
+                <Label x:Name="uploadTitle" Text="Upload" FontAttributes="Bold" XAlign="Center" Margin="0,30,0,0" FontSize="30" TextColor="#50ADE6"/>
+                <StackLayout>
+                    <BoxView HeightRequest="1" x:Name="uploadLine" BackgroundColor="#50ADE6" Margin="10,10,10,10"/>
+                </StackLayout>
+                <StackLayout Margin="10,40,10,0">
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="5*"></ColumnDefinition>
+                            <ColumnDefinition Width="5*"></ColumnDefinition>
+                        </Grid.ColumnDefinitions>
+                        <Image x:Name="FrontImage" Grid.Column="0"/>
+                        <Image x:Name="BackImage" Grid.Column="1"/>
+                    </Grid>
+
+                </StackLayout>
+                <StackLayout Margin="10,0,10,10">
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="5*"></ColumnDefinition>
+                            <ColumnDefinition Width="5*"></ColumnDefinition>
+                        </Grid.ColumnDefinitions>
+                        <Button Clicked="FrontUpload" Text="Upload" Grid.Column="0" BackgroundColor="#BB99C7" TextColor="#171717"/>
+                        <Button Clicked="BackUpload" Text="Upload" Grid.Column="1" BackgroundColor="#50ADE6" TextColor="#171717"/>
+                    </Grid>
+                </StackLayout>
+
+                <Button x:Name="submit" Text="Submit" Margin="10,20,10,10" BackgroundColor="#50ADE6" TextColor="#171717" Clicked="Submit"/>
+            </StackLayout>
+    	</ContentPage.Content>
+    </ContentPage>
+
+    <ContentPage>
+        <ContentPage.Content>
+            <StackLayout BackgroundColor="#171717">
+                <StackLayout>
+                    <Label x:Name="mealsTitle" Text="Meals" FontAttributes="Bold" XAlign="Center" Margin="0,30,0,0" FontSize="30" TextColor="#50ADE6"/>
+                    <StackLayout>
+                        <BoxView x:Name="topLine" HeightRequest="1" BackgroundColor="#50ADE6" Margin="10,10,10,10"/>
+                    </StackLayout>
+
+                </StackLayout>
+                
+                <StackLayout VerticalOptions="CenterAndExpand">
+                    <Label x:Name="meals_label" TextColor="White" Text="Workout Meals"/>
+                </StackLayout>
+                
+                <StackLayout VerticalOptions="End">
+                    <StackLayout>
+                        <BoxView x:Name="mealLine" HeightRequest="1" BackgroundColor="#50ADE6" Margin="10,10,10,10"/>
+                    </StackLayout>
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="5*"></ColumnDefinition>
+                            <ColumnDefinition Width="5*"></ColumnDefinition>
+                        </Grid.ColumnDefinitions>
+                        <Button Text="Workout" TextColor="#171717" Clicked="Workout" Grid.Column="0" BackgroundColor="#50ADE6"/>
+                        <Button Text="Non-Workout" TextColor="#171717" Clicked="Non_Workout" Grid.Column="1" BackgroundColor="#BB99C7"/>
+                    </Grid>
+                </StackLayout>
+            </StackLayout>
+                     
+        </ContentPage.Content>
+    </ContentPage>
+
+    <ContentPage>
+        <ContentPage.Content>
+            <StackLayout BackgroundColor="#171717">
+                <Label x:Name="settingsTitle" Text="Settings" FontAttributes="Bold" XAlign="Center" Margin="0,30,0,0" FontSize="30" TextColor="#50ADE6"/>
+                <StackLayout>
+                    <BoxView x:Name="settingsLine" HeightRequest="1" BackgroundColor="#50ADE6" Margin="10,10,10,10"/>
+                </StackLayout>
+                <Button Text="Logout" TextColor="#171717" BackgroundColor="#50ADE6" Clicked="Logout" Margin="30,30,30,30" />
+
+            </StackLayout>
+        </ContentPage.Content>
+    </ContentPage>
+    
+</CarouselPage>
